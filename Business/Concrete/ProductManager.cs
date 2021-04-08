@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Business.Abstract;
+using Business.Costants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -37,19 +38,19 @@ namespace Business.Concrete
         public IResult Add(Product product)
         {
             _productDal.Add(product);
-            return new SuccessResult("Ürün eklendi.");
+            return new SuccessResult(Messages.ProductAdded);
         }
 
         public IResult Delete(Product product)
         {
             _productDal.Delete(product);
-            return new Result(true, "Ürün silindi");
+            return new Result(true, Messages.ProductDeleted);
         }
 
         public IResult Update(Product product)
         {
             _productDal.Update(product);
-            return new Result( true,"Ürün güncellendi");
+            return new Result( true,Messages.ProductUpdated);
         }
     }
 }

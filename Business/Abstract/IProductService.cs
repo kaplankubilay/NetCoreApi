@@ -14,5 +14,12 @@ namespace Business.Abstract
         IResult Add(Product product);
         IResult Delete(Product product);
         IResult Update(Product product);
+
+        /// <summary>
+        /// transection testi için yapılan interface.
+        /// </summary>
+        /// <param name="product"></param>
+        /// <returns></returns>
+        IResult TransectionOperation(Product product);
     }
 }

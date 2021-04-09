@@ -5,6 +5,7 @@ using System.Text;
 using Business.Abstract;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspect.Autofac.Transaction;
 using Core.Aspect.Autofac.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -60,6 +61,14 @@ namespace Business.Concrete
         {
             _productDal.Update(product);
             return new Result( true,Messages.ProductUpdated);
+        }
+
+        [TransactionScopeAspect]
+        public IResult TransectionOperation(Product product)
+        {
+            _productDal.Update(product);
+            //_productDal.Add(product);
+            return new SuccessResult(Messages.ProductUpdated);
         }
     }
 }

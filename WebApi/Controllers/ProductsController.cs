@@ -93,5 +93,17 @@ namespace WebApi.Controllers
 
             return BadRequest(result.Message);
         }
+
+        [HttpPost("transection")]
+        public IActionResult TransectionTest(Product product)
+        {
+            var result = _productService.TransectionOperation(product);
+            if (result.Success)
+            {
+                return Ok(result.Message);
+            }
+
+            return BadRequest(result.Message);
+        }
     }
 }

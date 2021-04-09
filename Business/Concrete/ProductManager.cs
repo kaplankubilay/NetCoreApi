@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspect.Autofac.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -35,6 +37,13 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Product>>(_productDal.GetList(p => p.CategoryId == categoryId).ToList());
         }
 
+        /// <summary>
+        /// CacheRemoveAspect= "IProductService altında bulunan ve adında "Get" key i barındıran metodlara bağlı cache bilgilerini silecek.
+        /// "Priority" ile birden fazla attribute arasından hangi öncelikte çalışacagı belirtilir.
+        /// </summary>
+        /// <param name="product"></param>
+        /// <returns></returns>
+        [ValidationAspect(typeof(ProductValidator), Priority = 1)]
         public IResult Add(Product product)
         {
             _productDal.Add(product);

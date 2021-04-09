@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Business.Abstract;
 using Entities.Concrete;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApi.Controllers
 {
@@ -21,7 +22,7 @@ namespace WebApi.Controllers
         }
 
         [HttpGet("getall")]
-        //[Authorize(Roles="Admin")]
+        [Authorize(Roles = "Admin")]
         public IActionResult GetList()
         {
             var result = _productService.GetList();

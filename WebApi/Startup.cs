@@ -10,6 +10,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Core.DependencyResolvers;
+using Core.Extensions;
+using Core.Utilities.IoC;
 using Core.Utilities.Security.Encryption;
 using Core.Utilities.Security.JWT;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -50,6 +53,12 @@ namespace WebApi
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = SecurityKeyHelper.CreateSecurityKey(tokenOptions.SecurityKey)
                 };
+            });
+
+            //Framework seviyesinde uygulanabilecek tüm merkezi service injection larýný burada gerçekleþtirdik.
+            services.AddDependencyResolvers(new ICoreModule[]
+            {
+                new CoreModule(),
             });
         }
 

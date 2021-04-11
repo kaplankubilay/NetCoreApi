@@ -5,6 +5,7 @@ using System.Text;
 using Business.Abstract;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspect.Autofac.Caching;
 using Core.Aspect.Autofac.Transaction;
 using Core.Aspect.Autofac.Validation;
 using Core.Utilities.Results;
@@ -33,6 +34,14 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Product>>(_productDal.GetList().ToList());
         }
 
+        /// <summary>
+        /// Veri bir dk boyunca cache ten gelecek sonra veri, veritabanından gelecek. Ardından çekilen veri yine cache e eklenecek.
+        /// Ve cache bu yolla dakikada bir güncellenerek çekilen veri beslenmiş olacak. (default değeri 60 dk olarak tanımlandı)
+        /// </summary>
+        /// <param name="categoryId"></param>
+        /// <returns></returns>
+        //[SecuredOperation("Admin,Person")]
+        [CacheAspect(duration: 10)]
         public IDataResult<List<Product>> GetListByCategory(int categoryId)
         {
             return new SuccessDataResult<List<Product>>(_productDal.GetList(p => p.CategoryId == categoryId).ToList());

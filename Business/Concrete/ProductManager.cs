@@ -48,12 +48,13 @@ namespace Business.Concrete
         }
 
         /// <summary>
-        /// CacheRemoveAspect= "IProductService altında bulunan ve adında "Get" key i barındıran metodlara bağlı cache bilgilerini silecek.
+        /// CacheRemoveAspect= "IProductService altında bulunan ve adında "Get" key i barındıran metodlara bağlı cache bilgilerini silecek..
         /// "Priority" ile birden fazla attribute arasından hangi öncelikte çalışacagı belirtilir.
         /// </summary>
         /// <param name="product"></param>
         /// <returns></returns>
         [ValidationAspect(typeof(ProductValidator), Priority = 1)]
+        [CacheRemoveAspect("IProductService.Get")]
         public IResult Add(Product product)
         {
             _productDal.Add(product);

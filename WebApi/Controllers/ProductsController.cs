@@ -22,7 +22,7 @@ namespace WebApi.Controllers
         }
 
         [HttpGet("getall")]
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")] Bu rol tanımı attribute ü yanlızca core için uygulanabilir bir yöntem bu nedenle bu kullanım doğru değil. 
         public IActionResult GetList()
         {
             var result = _productService.GetList();

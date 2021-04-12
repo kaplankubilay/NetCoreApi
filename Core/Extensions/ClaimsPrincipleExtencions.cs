@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
+using System.Text;
+
+namespace Core.Extensions
+{
+    public static class ClaimsPrincipleExtencions
+    {
+        public static List<string> Claims(this ClaimsPrincipal claimsPrincipal, string claimType)
+        {
+            var result = claimsPrincipal?.FindAll(claimType)?.Select(x => x.Value).ToList();
+            return result;
+        }
+
+        /// <summary>
+        /// Rolleri tek satırda getirecek.
+        /// </summary>
+        /// <param name="claimsPrinciple"></param>
+        /// <returns></returns>
+        public static List<string> ClaimsRoles(this ClaimsPrincipal claimsPrinciple)
+        {
+            return claimsPrinciple?.Claims(ClaimTypes.Role);
+        }
+    }
+}

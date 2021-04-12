@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using Business.Abstract;
 using Business.BusinessAspect.Autofact;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspect.Autofac.Caching;
+using Core.Aspect.Autofac.Performance;
 using Core.Aspect.Autofac.Transaction;
 using Core.Aspect.Autofac.Validation;
 using Core.Utilities.Results;
@@ -30,8 +32,16 @@ namespace Business.Concrete
             return new SuccessDataResult<Product>(_productDal.Get(p => p.ProductId == productId));
         }
 
+        /// <summary>
+        /// "PerformanceAspect" eğer 5 saniyeyi geçerse hata vermeyecek ancak output a yazacaktır.
+        /// </summary>
+        /// <returns></returns>
+        [PerformanceAspect(5)]
         public IDataResult<List<Product>> GetList()
         {
+            //işlemi 5 sn bekleterek output a gecikme olduğu bilgisi yazdırıdı. 
+            Thread.Sleep(5000);
+
             return new SuccessDataResult<List<Product>>(_productDal.GetList().ToList());
         }
 

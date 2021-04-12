@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Business.Abstract;
+using Business.BusinessAspect.Autofact;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspect.Autofac.Caching;
@@ -40,7 +41,7 @@ namespace Business.Concrete
         /// </summary>
         /// <param name="categoryId"></param>
         /// <returns></returns>
-        //[SecuredOperation("Admin,Person")]
+        [SecuredOperation("Admin")]
         [CacheAspect(duration: 10)]
         public IDataResult<List<Product>> GetListByCategory(int categoryId)
         {

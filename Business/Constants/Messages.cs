@@ -17,7 +17,7 @@
         public static string UserRegistered = "Kullanıcı kaydı başarılı.";
         public static string AccessTokenCreated = "Access token başarıyla oluşturuldu.";
 
-        public static string AuthorizationDenied = "Yetkiniz yok!";
+        public static string AuthorizationDenied = "Yetkiniz yok!.";
         public static string ProductNameAlreadyExist = "Ürün ismi zaten mevcut!.";
     }
 }

@@ -11,6 +11,7 @@ using Core.Aspect.Autofac.Caching;
 using Core.Aspect.Autofac.Performance;
 using Core.Aspect.Autofac.Transaction;
 using Core.Aspect.Autofac.Validation;
+using Core.Utilities.Business;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -68,10 +69,29 @@ namespace Business.Concrete
         [CacheRemoveAspect("IProductService.Get")]
         public IResult Add(Product product)
         {
+            //"CheckIfProductExists" metodunun arkasına başka kontrol metodları da eklenerek "Success-Error değeri toplu olarak döndürülebilir."
+            IResult result = BusinessRules.Run(CheckIfProductExists(product.ProductName));
+
+            if (result!=null)
+            {
+                return result;
+            }
+
             _productDal.Add(product);
             return new SuccessResult(Messages.ProductAdded);
         }
 
+        private IResult CheckIfProductExists(string productName)
+        {
+            var result = _productDal.GetList(p => p.ProductName == productName).Any();
+            if (result)
+            {
+                return new ErrorResult(result, Messages.ProductNameAlreadyExist);
+            }
+
+            return new SuccessResult();
+        }
+        
         public IResult Delete(Product product)
         {
             _productDal.Delete(product);

@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 using Business.Abstract;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Authorization;
+using WebApi.Utility.Filters;
 
 namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [ExceptionLogInterceptor]
     public class ProductsController : ControllerBase
     {
         private IProductService _productService;

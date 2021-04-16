@@ -26,9 +26,12 @@ namespace Business.DependencyReselvers.AutoFact
             builder.RegisterType<UserManager>().As<IUserService>();
             builder.RegisterType<EfUserDal>().As<IUserDal>();
 
+            builder.RegisterType<ExceptionLogManager>().As<IExceptionLogService>();
+            builder.RegisterType<EfExceptionLogDal>().As<IExceptionLogDal>();
+
             builder.RegisterType<AuthManager>().As<IAuthService>();
             builder.RegisterType<JwtHelper>().As<ITokenHelper>();
-
+            
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 
             builder.RegisterAssemblyTypes(assembly).AsImplementedInterfaces()

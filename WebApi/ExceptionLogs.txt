@@ -1,0 +1,99 @@
+﻿16.04.2021 14:14:23 - System.Exception: Yetkiniz yok!.
+   at Business.BusinessAspect.Autofact.SecuredOperation.OnBefore(IInvocation invocation) in C:\Users\Kemal Özen\source\repos\NetCoreApi\NetCoreApi\Business\BusinessAspect\Autofact\SecuredOperation.cs:line 41
+   at Core.Utilities.Interceptors.MethodInterception.Intercept(IInvocation invocation) in C:\Users\Kemal Özen\source\repos\NetCoreApi\NetCoreApi\Core\Utilities\Interceptors\MethodInterception.cs:line 49
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.IProductServiceProxy.GetListByCategory(Int32 categoryId)
+   at WebApi.Controllers.ProductsController.GetByCategory(Int32 categoryId) in C:\Users\Kemal Özen\source\repos\NetCoreApi\NetCoreApi\WebApi\Controllers\ProductsController.cs:line 42
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+16.04.2021 14:17:40 - System.Exception: Yetkiniz yok!.
+   at Business.BusinessAspect.Autofact.SecuredOperation.OnBefore(IInvocation invocation) in C:\Users\Kemal Özen\source\repos\NetCoreApi\NetCoreApi\Business\BusinessAspect\Autofact\SecuredOperation.cs:line 41
+   at Core.Utilities.Interceptors.MethodInterception.Intercept(IInvocation invocation) in C:\Users\Kemal Özen\source\repos\NetCoreApi\NetCoreApi\Core\Utilities\Interceptors\MethodInterception.cs:line 49
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.IProductServiceProxy.GetListByCategory(Int32 categoryId)
+   at WebApi.Controllers.ProductsController.GetByCategory(Int32 categoryId) in C:\Users\Kemal Özen\source\repos\NetCoreApi\NetCoreApi\WebApi\Controllers\ProductsController.cs:line 42
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+16.04.2021 14:28:34 - System.Exception: Yetkiniz yok!.
+   at Business.BusinessAspect.Autofact.SecuredOperation.OnBefore(IInvocation invocation) in C:\Users\Kemal Özen\source\repos\NetCoreApi\NetCoreApi\Business\BusinessAspect\Autofact\SecuredOperation.cs:line 41
+   at Core.Utilities.Interceptors.MethodInterception.Intercept(IInvocation invocation) in C:\Users\Kemal Özen\source\repos\NetCoreApi\NetCoreApi\Core\Utilities\Interceptors\MethodInterception.cs:line 49
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.IProductServiceProxy.GetListByCategory(Int32 categoryId)
+   at WebApi.Controllers.ProductsController.GetByCategory(Int32 categoryId) in C:\Users\Kemal Özen\source\repos\NetCoreApi\NetCoreApi\WebApi\Controllers\ProductsController.cs:line 42
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+16.04.2021 14:37:47 - System.Exception: Yetkiniz yok!.
+   at Business.BusinessAspect.Autofact.SecuredOperation.OnBefore(IInvocation invocation) in C:\Users\Kemal Özen\source\repos\NetCoreApi\NetCoreApi\Business\BusinessAspect\Autofact\SecuredOperation.cs:line 41
+   at Core.Utilities.Interceptors.MethodInterception.Intercept(IInvocation invocation) in C:\Users\Kemal Özen\source\repos\NetCoreApi\NetCoreApi\Core\Utilities\Interceptors\MethodInterception.cs:line 49
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.IProductServiceProxy.GetListByCategory(Int32 categoryId)
+   at WebApi.Controllers.ProductsController.GetByCategory(Int32 categoryId) in C:\Users\Kemal Özen\source\repos\NetCoreApi\NetCoreApi\WebApi\Controllers\ProductsController.cs:line 42
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+16.04.2021 14:47:27 - FluentValidation.ValidationException: Validation failed: 
+ -- ProductName: Ürün adı A harfi ile başlamalı.
+   at Core.CrossCuttingConcerns.ValidationTool.Validate(IValidator validator, Object entity) in C:\Users\Kemal Özen\source\repos\NetCoreApi\NetCoreApi\Core\CrossCuttingConcerns\Validation\ValidationTool.cs:line 18
+   at Core.Aspect.Autofac.Validation.ValidationAspect.OnBefore(IInvocation invocation) in C:\Users\Kemal Özen\source\repos\NetCoreApi\NetCoreApi\Core\Aspect\Autofac\Validation\ValidationAspect.cs:line 34
+   at Core.Utilities.Interceptors.MethodInterception.Intercept(IInvocation invocation) in C:\Users\Kemal Özen\source\repos\NetCoreApi\NetCoreApi\Core\Utilities\Interceptors\MethodInterception.cs:line 49
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Core.Utilities.Interceptors.MethodInterception.Intercept(IInvocation invocation) in C:\Users\Kemal Özen\source\repos\NetCoreApi\NetCoreApi\Core\Utilities\Interceptors\MethodInterception.cs:line 52
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.IProductServiceProxy.Add(Product product)
+   at WebApi.Controllers.ProductsController.Add(Product product) in C:\Users\Kemal Özen\source\repos\NetCoreApi\NetCoreApi\WebApi\Controllers\ProductsController.cs:line 66
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+

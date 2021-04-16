@@ -6,11 +6,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Business.Abstract;
 using Entities.Dtos;
+using WebApi.Utility.Filters;
 
 namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [ExceptionLogInterceptor]
     public class AuthsController : ControllerBase
     {
         private IAuthService _authService;
